@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../static/css/register.css" th:href="@{/css/register.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="user">
+    <header class="user__header">
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3219/logo.svg" alt="" />
+        <h1 class="user__title">Sign-up form</h1>
+    </header>
+
+    <form class="form" method="post">
+
+        <div class="form__group">
+            <input type="text" placeholder="First name" class="form__input" name="firstName" />
+        </div>
+
+        <div class="form__group">
+            <input type="text" placeholder="Last name" class="form__input" name="lastName" />
+        </div>
+
+        <div class="form__group">
+            <input type="email" placeholder="Email" class="form__input" name="email"/>
+        </div>
+
+        <div class="form__group">
+            <input type="password" placeholder="Password" class="form__input" name="password"/>
+        </div>
+
+        <!--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
+
+        <input type="submit" value="Register" />
+    </form>
+</div>
+</body>
+</html>

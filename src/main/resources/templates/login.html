@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="../static/css/login.css" th:href="@{/css/login.css}" rel="stylesheet" />
+</head>
+<body>
+<div class="login-page">
+    <div class="form">
+        <form class="login-form" method="post">
+            <input type="text" placeholder="username" name="username"/>
+            <input type="password" placeholder="password" name="password"/>
+            <button>login</button>
+            <p class="message">Not registered? <a th:href="@{/register}">Create an account</a></p>
+            <!--<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />-->
+        </form>
+    </div>
+</div>
+</body>
+</html>
